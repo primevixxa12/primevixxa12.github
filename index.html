@@ -2,5 +2,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PV Video</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      background: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .start-screen {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+    }
+
+    #startBtn {
+      padding: 18px 55px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      background: #111;
+      border: 2px solid white;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(255,255,255,0.25);
+    }
+
+    #startBtn:active {
+      transform: scale(0.95);
+    }
+
+    .video-screen {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      background: #000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="start-screen" id="startScreen">
+    <button id="startBtn">START</button>
+  </div>
+
+  <div class="video-screen" id="videoScreen">
+    <iframe
+      src="https://www.youtube.com/embed/LP5FydFYAdo?autoplay=1&rel=0"
+      allow="autoplay; fullscreen"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <script>
+    document.getElementById("startBtn").addEventListener("click", function () {
+      document.getElementById("startScreen").style.display = "none";
+      document.getElementById("videoScreen").style.display = "flex";
+    });
+  </script>
+
+</body>
+</html>
