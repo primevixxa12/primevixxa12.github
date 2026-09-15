@@ -1,92 +1,24 @@
+print("🤖 My AI Chatbot")
+print("Type 'bye' to stop.\n")
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PV Video</title>
+while True:
+    user = input("You: ").lower()
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    if user == "bye":
+        print("Bot: Bye! 👋")
+        break
 
-    body {
-      width: 100%;
-      min-height: 100vh;
-      background: #000;
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
+    elif "hello" in user or "hi" in user:
+        print("Bot: Hello! 😎")
 
-    .start-screen {
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #000;
-    }
+    elif "name" in user:
+        print("Bot: Mera naam Mahaz AI hai 🤖")
 
-    #startBtn {
-      padding: 18px 55px;
-      font-size: 24px;
-      font-weight: bold;
-      color: white;
-      background: #111;
-      border: 2px solid white;
-      border-radius: 12px;
-      cursor: pointer;
-      box-shadow: 0 0 25px rgba(255,255,255,0.25);
-    }
+    elif "how are you" in user:
+        print("Bot: Main bilkul theek hoon! 🔥")
 
-    #startBtn:active {
-      transform: scale(0.95);
-    }
+    elif "game" in user:
+        print("Bot: Mujhe Free Fire pasand hai 🎮")
 
-    .video-screen {
-      display: none;
-      width: 100%;
-      height: 100vh;
-      background: #000;
-      justify-content: center;
-      align-items: center;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="start-screen" id="startScreen">
-    <button id="startBtn">START</button>
-  </div>
-
-  <div class="video-screen" id="videoScreen">
-    <iframe
-      src="https://youtube.com/shorts/ErEVjot-N5w?si=YULpoxvk51ejO64z"
-      allow="autoplay; fullscreen"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <script>
-    document.getElementById("startBtn").addEventListener("click", function () {
-      document.getElementById("startScreen").style.display = "none";
-      document.getElementById("videoScreen").style.display = "flex";
-    });
-  </script>
-
-</body>
-</html>
+    else:
+        print("Bot: Sorry, mujhe ye samajh nahi aaya 😅")
